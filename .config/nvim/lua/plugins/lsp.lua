@@ -25,7 +25,6 @@ return {
             ensure_installed = {
                 "rust_analyzer",
                 "clangd",
-                "lua_ls"
             },
         },
     },
