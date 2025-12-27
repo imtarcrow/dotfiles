@@ -26,7 +26,6 @@ return {
             { '<leader>e', '<CMD>Oil<CR>', desc = 'Open the Oil File Manager' },
         }
     },
-
     {
         'nvim-telescope/telescope.nvim',
         lazy = true,
@@ -41,17 +40,26 @@ return {
                     fuzzy = true,
                     override_generic_sorter = true,
                     override_file_sorter = true,
-                    case_mode = "smart_case",
+                    case_mode = 'smart_case',
+                },
+            },
+            pickers = {
+                find_files = {
+                    no_ignore = true,
+                    hidden = true,
                 }
-            }
+            },
         },
         keys = {
             { '<leader>ff', '<CMD>Telescope find_files<CR>', desc = "Find Files" },
-            { '<leader>fg', '<cmd>Telescope live_grep<cr>',  desc = "Live Grep" },
-            { '<leader>fb', '<cmd>Telescope buffers<cr>',    desc = "Buffers" },
-            { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" }, },
-        config = function()
+            { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = "Live Grep" },
+            { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = "Buffers" },
+            { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" },
+        },
+        config = function(_, opts)
+            -- Added the opts to the config function because it works ¯\(ツ)/¯
+            require('telescope').setup(opts)
             require('telescope').load_extension('fzf')
         end
-    },
+    }
 }
