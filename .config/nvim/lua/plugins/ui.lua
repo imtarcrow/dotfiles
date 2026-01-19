@@ -7,9 +7,31 @@ return {
         config = function ()
             vim.g.mellow_transparent = true
             vim.g.mellow_bold_booleans = true
-            vim.g.mellow_italic_comments = true,
-
-            vim.cmd([[colorscheme mellow]])
+            vim.g.mellow_italic_comments = true
+        end
+    },
+    {
+        'rebelot/kanagawa.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        'vague-theme/vague.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            transparent = true,
+        },
+        config = function() 
+            vim.cmd([[colorscheme vague]])
         end
     },
 
