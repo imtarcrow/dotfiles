@@ -1,15 +1,18 @@
 
-## Dotfiles Repository
+### Dotfiles
 
-Contains dotfiles for
+Inside this repository there are multiple configuration files for different programs such as:
 
 * zsh
 * nvim
 * kitty
+* git
 
-## Installation 
+## how to installation 
 
 ```
 cd ~
-git clone --bare https://github.com/imtarcrow/dotfiles.git .dotfiles
+git clone https://github.com/imtarcrow/dotfiles .dotfiles
+cd .dotfiles
+stow .
 ```
