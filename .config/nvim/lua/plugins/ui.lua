@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		prioriy = 1000,
 		config = function()
-			vim.g.mellow_transparent = true
+            vim.g.mellow_transparent = true
 			vim.g.mellow_bold_booleans = true
 			vim.g.mellow_italic_comments = true
 
