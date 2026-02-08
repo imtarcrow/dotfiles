@@ -19,7 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 -- Configuring lazy.nvim
-
 require('lazy').setup({
     spec = {
         {
@@ -31,14 +30,10 @@ require('lazy').setup({
     },
     install = {
         colorscheme = {
-            'mellow'
+            'kanagawa'
         }
     },
     ui = {
         border = 'rounded',
     },
-    profiling = {
-        loader = true,
-        require = true,
-    }
 })

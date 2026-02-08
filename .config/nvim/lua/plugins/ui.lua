@@ -1,46 +1,47 @@
 return {
 	-- Themes
 	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			theme = "wave",
+			background = {
+				dark = "wave",
+			},
+			overrides = function(colors)
+				local theme = colors.theme
+				return {
+					LineNr = { fg = theme.syn.comment, bold = true },
+					EndOfBuffer = {
+						fg = theme.ui.special,
+						bold = false,
+					},
+				}
+			end,
+			colors = {
+				theme = {
+					all = {
+						ui = {
+							bg_gutter = "none",
+						},
+					},
+				},
+			},
+		},
+		config = function(_, opts)
+			require("kanagawa").setup(opts)
+			vim.cmd("colorscheme kanagawa")
+		end,
+	},
+	{
 		"mellow-theme/mellow.nvim",
 		lazy = false,
 		prioriy = 1000,
 		config = function()
-            vim.g.mellow_transparent = true
+			vim.g.mellow_transparent = true
 			vim.g.mellow_bold_booleans = true
 			vim.g.mellow_italic_comments = true
-
-			vim.cmd([[colorscheme mellow]])
-
-		end,
-	},
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-	{
-		"vague-theme/vague.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			transparent = true,
-		},
-		config = function()
 		end,
 	},
 
@@ -52,7 +53,7 @@ return {
 			require("lualine").setup({
 				options = {
 					icons_enabled = true,
-					theme = "seoul256",
+					theme = "auto",
 					sections = {
 						lualine_a = { "mode" },
 						lualine_b = { "branch", "diff", "diagnostics" },
