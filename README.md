@@ -12,7 +12,7 @@ Inside this repository there are multiple configuration files for different prog
 
 ```
 cd ~
-git clone https://github.com/imtarcrow/dotfiles .dotfiles
-cd .dotfiles
+git clone https://github.com/imtarcrow/dotfiles dotfiles
+cd dotfiles
 stow .
 ```
