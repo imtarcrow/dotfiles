@@ -1,6 +1,10 @@
 return {
 	-- Themes
-	{
+    {
+	    "rose-pine/neovim",
+	    name = "rose-pine",
+    },
+    {
 		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
