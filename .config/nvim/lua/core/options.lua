@@ -12,6 +12,7 @@ vim.o.smartindent = true
 -- UI
 vim.o.showmode = false
 vim.o.winborder = "rounded"
+vim.o.cursorline = true
 
 vim.o.clipboard = "unnamedplus"
 vim.o.swapfile = false
