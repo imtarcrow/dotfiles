@@ -8,7 +8,7 @@ SAVEHIST=2500
 bindkey -e
 
 # Setup autocompletion
-zstyle :compinstall filename '/home/tarcrow/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
