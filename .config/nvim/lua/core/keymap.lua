@@ -1,10 +1,13 @@
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
-vim.keymap.set("n", "gt", vim.lsp.buf.type_definition)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol)
+vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references)
+vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename)
+vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
 
-vim.keymap.set("n", "F", vim.lsp.buf.format)
-vim.keymap.set("n", "n", vim.diagnostic.open_float)
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action) 
+vim.keymap.set("n", "<leader>F", vim.lsp.buf.format)
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
