@@ -1,7 +1,7 @@
-setopt AUTO_CD          # type a dir name to cd into it
-setopt CORRECT          # suggest corrections for typos
-setopt GLOB_DOTS        # include dotfiles in globs
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'  # ctrl+w stops at slashes
+setopt AUTO_CD
+setopt CORRECT
+setopt GLOB_DOTS
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # Setup history file
 setopt HIST_IGNORE_DUPS
@@ -22,8 +22,8 @@ bindkey -e
 fpath+=($HOME/.zsh/pure)
 
 # Setup autocompletion
-zstyle ':completion:*' menu select       # arrow-key navigable menu
-zstyle ':completion:*' matcher-list 'm:{a-z}=A-Z'  # case-insensitive
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}=A-Z'
 setopt COMPLETE_ALIASES
 
 autoload -Uz compinit
