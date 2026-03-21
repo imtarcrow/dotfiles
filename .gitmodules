@@ -1,0 +1,6 @@
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".tmux/plugins/kanagawa-tmux"]
+	path = .tmux/plugins/kanagawa-tmux
+	url = https://github.com/obergodmar/kanagawa-tmux

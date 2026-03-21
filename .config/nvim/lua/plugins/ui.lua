@@ -7,10 +7,6 @@ return {
             variant = 'main',
             dim_inactive_windows = true,
         },
-        config = function(_, opts)
-            require('rose-pine').setup(opts);
-            vim.cmd("colorscheme rose-pine")
-        end,
     },
     {
         "rebelot/kanagawa.nvim",
@@ -24,10 +20,10 @@ return {
             overrides = function(colors)
                 local theme = colors.theme
                 return {
-                    LineNr = { fg = theme.syn.comment, bold = true },
+                    LineNr = { fg = theme.syn.comment, bold = false },
                     EndOfBuffer = {
                         fg = theme.ui.special,
-                        bold = false,
+                        bold = true,
                     },
                 }
             end,
@@ -41,6 +37,10 @@ return {
                 },
             },
         },
+        config = function(_, opts)
+            require('kanagawa').setup(opts);
+            vim.cmd("colorscheme kanagawa")
+        end,
     },
     {
         "mellow-theme/mellow.nvim",
