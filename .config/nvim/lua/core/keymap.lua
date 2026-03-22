@@ -9,8 +9,8 @@ vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
 
 vim.keymap.set("n", "<leader>F", vim.lsp.buf.format)
 
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
+-- vim.keymap.set('n', '<C-d>', '<C-d>zz')
+-- vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 vim.keymap.set("n", "<leader>th", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }))
