@@ -35,6 +35,9 @@ return {
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install' }
         },
         opts = {
+            defaults = {
+                borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            },
             extensions = {
                 fzf = {
                     fuzzy = true,
@@ -52,8 +55,8 @@ return {
         },
         keys = {
             { '<leader>ff', '<CMD>Telescope find_files<CR>', desc = "Find Files" },
-            { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = "Live Grep" },
-            { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = "Buffers" },
+            { '<leader>fg', '<cmd>Telescope live_grep<cr>',  desc = "Live Grep" },
+            { '<leader>fb', '<cmd>Telescope buffers<cr>',    desc = "Buffers" },
             { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" },
         },
         config = function(_, opts)

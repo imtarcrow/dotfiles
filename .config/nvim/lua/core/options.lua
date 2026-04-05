@@ -1,25 +1,35 @@
 
 -- Line numbers
-vim.o.number = true
-vim.o.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Identation
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.o.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
 
 -- UI
-vim.o.showmode = false
-vim.o.winborder = "rounded"
-vim.o.cursorline = true
-
-vim.o.clipboard = "unnamedplus"
-vim.o.swapfile = false
-vim.o.signcolumn = "yes"
-vim.o.splitright = true
-vim.o.wrap = false
+vim.opt.showmode = false
+vim.opt.winborder = "single"
+vim.opt.signcolumn = "yes"
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.wrap = false
 
 -- Scrolloff
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 8
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+
+-- Files
+vim.opt.swapfile = false
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
+
+vim.opt.mouse = ""
+vim.opt.clipboard = "unnamedplus"

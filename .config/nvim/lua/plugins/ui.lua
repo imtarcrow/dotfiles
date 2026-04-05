@@ -37,10 +37,6 @@ return {
                 },
             },
         },
-        config = function(_, opts)
-            require('kanagawa').setup(opts);
-            vim.cmd("colorscheme kanagawa")
-        end,
     },
     {
         "mellow-theme/mellow.nvim",
