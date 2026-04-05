@@ -30,20 +30,6 @@ return {
         },
     },
     {
-        'alexpasmantier/krust.nvim',
-        lazy = true,
-        opts = {
-            keymap = '<leader>k',
-            float_win = {
-                border = 'rounded',
-                auto_focus = false,
-            }
-        },
-        keys = {
-            '<leader>k',
-        }
-    },
-    {
         'nvim-treesitter/nvim-treesitter',
         lazy = false,
         branch = 'main',
