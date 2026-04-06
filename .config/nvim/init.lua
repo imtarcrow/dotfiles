@@ -11,3 +11,4 @@ require("core.options")
 require("core.keymap")
 
 vim.cmd("colorscheme " .. Theme)
+

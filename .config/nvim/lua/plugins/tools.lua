@@ -48,7 +48,7 @@ return {
             },
             pickers = {
                 find_files = {
-                    no_ignore = true,
+                    -- no_ignore = true,
                     hidden = true,
                 }
             },
@@ -60,9 +60,16 @@ return {
             { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" },
         },
         config = function(_, opts)
-            -- Added the opts to the config function because it works ¯\(ツ)/¯
             require('telescope').setup(opts)
             require('telescope').load_extension('fzf')
+
+            vim.api.nvim_create_autocmd("User", {
+                pattern = "TelescopePreviewerLoaded",
+                callback = function()
+                    vim.wo.number = true
+                end,
+            })
+
         end
     }
 }
