@@ -36,6 +36,9 @@ return {
         },
         opts = {
             defaults = {
+                file_ignore_patterns = {
+                    ".git"
+                },
                 borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             },
             extensions = {
@@ -58,6 +61,7 @@ return {
             { '<leader>fg', '<cmd>Telescope live_grep<cr>',  desc = "Live Grep" },
             { '<leader>fb', '<cmd>Telescope buffers<cr>',    desc = "Buffers" },
             { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" },
+            { '<leader>cd', '<cmd>Telescope find_files cwd=~/dotfiles<cr>', desc = "Change dotfiles" },
         },
         config = function(_, opts)
             require('telescope').setup(opts)
@@ -69,7 +73,6 @@ return {
                     vim.wo.number = true
                 end,
             })
-
         end
     }
 }
