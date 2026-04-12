@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
 
-Theme = "kanagawa"
+Theme = "rose-pine"
 
 -- Load the lazy.nvim plugin manager 
 require("core.lazy")
