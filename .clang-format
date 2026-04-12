@@ -1,0 +1,76 @@
+BasedOnStyle:     WebKit
+Language:         Cpp
+
+IndentWidth:                  4
+UseTab:                       Never
+TabWidth:                     4
+ColumnLimit:                  140
+
+PointerAlignment:             Left
+ReferenceAlignment:           Pointer
+DerivePointerAlignment:       false
+
+AllowShortBlocksOnASingleLine: false
+AllowShortIfStatementsOnASingleLine:   Never
+AllowShortLoopsOnASingleLine:          false
+AllowShortCaseLabelsOnASingleLine:     false
+AllowShortFunctionsOnASingleLine:      None
+
+SpacesInParentheses:          false
+SpacesInAngles:               false
+SpacesInSquareBrackets:       false
+SpacesInContainerLiterals:    false
+SpaceAfterTemplateKeyword:    true
+
+BinPackArguments:             true
+BinPackParameters:            true
+PenaltyExcessCharacter:       1000
+PenaltyBreakBeforeFirstCallParameter: 19
+
+BreakBeforeBraces:            Custom
+BraceWrapping:
+  AfterFunction:              true      
+  AfterControlStatement:      false    
+  AfterClass:                 true
+  AfterStruct:                true
+  AfterEnum:                  false
+  AfterNamespace:             true
+  AfterCaseLabel:             false
+  BeforeElse:                 true
+  BeforeCatch:                true
+  BeforeWhile:                false
+  BeforeLambdaBody:           false
+  IndentBraces:               false
+  SplitEmptyFunction:         true
+  SplitEmptyRecord:           true
+  SplitEmptyNamespace:        true
+
+BreakConstructorInitializers: BeforeComma
+PackConstructorInitializers:  BinPack
+ConstructorInitializerIndentWidth: 4
+
+AccessModifierOffset:         -4
+AlignAfterOpenBracket:        Align
+AlignConsecutiveAssignments:  false
+AlignConsecutiveDeclarations: false
+Standard:                     c++20
+
+SortIncludes:                 true
+IncludeBlocks:                Regroup
+IncludeCategories:
+  - Regex:           '^(<|"(gtest|gmock|benchmark)/)'
+    Priority:        1
+  - Regex:           '^"(third_party|vendor|external)/'
+    Priority:        2
+  - Regex:           '^"(public|include)/'
+    Priority:        3
+  - Regex:           '^".*\.h'
+    Priority:        4
+  - Regex:           '.*'
+    Priority:        5
+
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon:     false
+SpaceBeforeRangeBasedForLoopColon: true
+FixNamespaceComments:         true
+AlignEscapedNewlines:         Right
