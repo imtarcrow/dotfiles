@@ -1,6 +1,9 @@
 return {
     -- Themes
     {
+        'vague-theme/vague.nvim'
+    },
+    {
         "rose-pine/neovim",
         name = "rose-pine",
         opts = {
