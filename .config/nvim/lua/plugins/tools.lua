@@ -5,10 +5,10 @@ return {
         opts = {
             default_file_explorer = true,
             columns = {
-                'icon',
                 'permissions',
-                'size',
                 'mtime',
+                'size',
+                'icon',
             },
             cleanup_delay_ms = 100,
             lsp_file_methods = {
