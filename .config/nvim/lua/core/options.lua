@@ -22,7 +22,7 @@ vim.opt.splitbelow = true
 vim.opt.wrap = false
 
 -- Scrolloff
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 8
 
 -- Files
@@ -33,7 +33,7 @@ vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 
-
+-- Autocommand for formatting code before save
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("lsp", { clear = true }),
     callback = function(args)
@@ -44,5 +44,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
             end,
         })
     end
+})
 
+-- Autocommand for Highlighting Yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = vim.api.nvim_create_augroup("yank", { clear = true }),
+    callback = function(args)
+        vim.highlight.on_yank({ higroup = 'Visual', timeout = 75 })
+    end
 })

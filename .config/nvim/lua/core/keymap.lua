@@ -1,3 +1,6 @@
+vim.keymap.set('n', '<C-d>', '<C-d>zz');
+vim.keymap.set('n', '<C-u>', '<C-u>zz');
+
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("LspMappings", { clear = true }),
     callback = function(args)
