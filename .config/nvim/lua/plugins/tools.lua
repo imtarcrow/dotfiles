@@ -57,10 +57,10 @@ return {
             },
         },
         keys = {
-            { '<leader>ff', '<CMD>Telescope find_files<CR>', desc = "Find Files" },
-            { '<leader>fg', '<cmd>Telescope live_grep<cr>',  desc = "Live Grep" },
-            { '<leader>fb', '<cmd>Telescope buffers<cr>',    desc = "Buffers" },
-            { '<leader>fs', '<cmd>Telescope treesitter<cr>', desc = "Treesitter Symbols" },
+            { '<leader>ff', '<CMD>Telescope find_files<CR>',                desc = "Find Files" },
+            { '<leader>fg', '<cmd>Telescope live_grep<cr>',                 desc = "Live Grep" },
+            { '<leader>fb', '<cmd>Telescope buffers<cr>',                   desc = "Buffers" },
+            { '<leader>fs', '<cmd>Telescope treesitter<cr>',                desc = "Treesitter Symbols" },
             { '<leader>cd', '<cmd>Telescope find_files cwd=~/dotfiles<cr>', desc = "Change dotfiles" },
         },
         config = function(_, opts)

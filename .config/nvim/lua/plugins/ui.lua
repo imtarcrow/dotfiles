@@ -1,6 +1,18 @@
 return {
     -- Themes
     {
+        'sainnhe/sonokai',
+        lazy = true,
+        config = function()
+            vim.g.sonokai_enable_italic = 1
+            vim.g.sonokai_diagnostic_virtual_text = 'colored'
+            vim.g.sonokai_better_performance = 1
+
+            -- intentionally fucks up the colors
+            vim.opt.termguicolors = false
+        end
+    },
+    {
         'vague-theme/vague.nvim'
     },
     {
