@@ -1,0 +1,24 @@
+return {
+    {
+        "nvim-treesitter/nvim-treesitter",
+        lazy = false,
+        commit = "7caec27",
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter").install({
+                "rust",
+                "c",
+                "cpp",
+                "lua",
+                "python",
+                "javascript",
+                "typescript",
+                "sql",
+                "json",
+                "xml",
+                "yaml",
+                "toml",
+            })
+        end,
+    },
+}
