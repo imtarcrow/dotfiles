@@ -4,30 +4,28 @@ require("lsp.diagnostics")
 -- Settings for the Language Servers
 require("lsp.rust")
 
---idk how the fuck this works but gemini generated it for me and it works 
+--idk how the fuck this works but gemini generated it for me and it works
 vim.api.nvim_create_autocmd({ "LspAttach", "LspProgress" }, {
-    group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
-    callback = function(args)
+	group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if not client or not client.server_capabilities.inlayHintProvider then
+			return
+		end
 
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if not client or not client.server_capabilities.inlayHintProvider then
-            return
-        end
+		local bufnr = args.buf
 
-        local bufnr = args.buf
-
-        if args.event == "LspProgress" then
-            local value = args.data.params.value
-            if value.kind == "end" and (value.title == "Indexing" or value.title == "loading") then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-            end
-
-        elseif args.event == "LspAttach" then
-            if client.name ~= "rust_analyzer" then
-                vim.schedule(function()
-                    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-                end)
-            end
-        end
-    end,
+		if args.event == "LspProgress" then
+			local value = args.data.params.value
+			if value.kind == "end" and (value.title == "Indexing" or value.title == "loading") then
+				vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+			end
+		elseif args.event == "LspAttach" then
+			if client.name ~= "rust_analyzer" then
+				vim.schedule(function()
+					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+				end)
+			end
+		end
+	end,
 })
