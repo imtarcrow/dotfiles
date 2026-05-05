@@ -1,4 +1,4 @@
--- Autocommand for formatting code before save
+-- autocommand for formatting code before save
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("lsp", { clear = true }),
     callback = function(args)
@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
--- Autocommand for Highlighting Yank
+-- autocommand for highlighting yank
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("yank", { clear = true }),
     callback = function(args)
