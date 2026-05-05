@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
 
-Theme = 'sonokai'
+Theme = "everforest"
 
 -- Load the lazy.nvim plugin manager
 require("core.lazy")
