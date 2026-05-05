@@ -3,7 +3,7 @@ vim.g.localmapleader = "\\"
 
 Theme = "everforest"
 
--- Load the lazy.nvim plugin manager
+-- load the lazy.nvim plugin manager
 require("core.lazy")
 
 -- set all options and keybinds
