@@ -32,7 +32,4 @@ require("lazy").setup({
             Theme,
         },
     },
-    ui = {
-        border = "single",
-    },
 })

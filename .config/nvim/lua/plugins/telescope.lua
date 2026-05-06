@@ -14,7 +14,7 @@ return {
         opts = {
             defaults = {
                 file_ignore_patterns = {
-                    ".git",
+                    "%.git/",
                 },
                 borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             },
@@ -28,7 +28,6 @@ return {
             },
             pickers = {
                 find_files = {
-                    -- no_ignore = true,
                     hidden = true,
                 },
             },
