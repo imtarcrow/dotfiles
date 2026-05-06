@@ -3,7 +3,7 @@ return {
         "nvim-telescope/telescope.nvim",
         lazy = true,
         dependencies = {
-            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-mini/mini.icons" },
             { "nvim-lua/plenary.nvim" },
             {
                 "nvim-telescope/telescope-fzf-native.nvim",
