@@ -65,9 +65,9 @@ return {
         priority = 1000,
         opts = {
             compile = true,
-            theme = "wave",
+            theme = "dragon",
             background = {
-                dark = "wave",
+                dark = "dragon",
             },
             overrides = function(colors)
                 local theme = colors.theme
