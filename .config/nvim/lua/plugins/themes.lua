@@ -1,5 +1,10 @@
 return {
     {
+        'https://github.com/nyoom-engineering/oxocarbon.nvim',
+        lazy = false,
+        priority = 1000,
+    },
+    {
         "sainnhe/everforest",
         lazy = false,
         priority = 1000,
