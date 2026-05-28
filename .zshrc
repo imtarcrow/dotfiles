@@ -16,7 +16,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Set emacs keybinds
-bindkey -e
+bindkey -v
 
 # Pure promt (https://github.com/sindresorhus/pure)
 fpath+=($HOME/.zsh/pure)
@@ -33,6 +33,13 @@ else
   compinit -C -d ~/.zsh/.zcompdump
 fi 
 
+# bun completions
+[ -s "/home/tarcrow/.bun/_bun" ] && source "/home/tarcrow/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Set Pure options
 PURE_CMD_MAX_EXEC_TIME=2
 PURE_GIT_DELAY_DIRTY_CHECK=180
@@ -41,3 +48,4 @@ zstyle ":prompt:pure:git:stash" show yes
 
 autoload -U promptinit; promptinit
 prompt pure
+
