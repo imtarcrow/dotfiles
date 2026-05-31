@@ -1,7 +1,7 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        lazy = false,
+        event = "BufReadPost",
         commit = "7caec27",
         build = ":TSUpdate",
         config = function()

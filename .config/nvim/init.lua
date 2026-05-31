@@ -1,7 +1,10 @@
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+
 vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
 
-Theme = "github_dark_high_contrast"
+Theme = "catppuccin"
 
 -- load the lazy.nvim plugin manager
 require("core.lazy")

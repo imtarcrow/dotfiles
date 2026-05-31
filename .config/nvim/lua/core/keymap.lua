@@ -1,7 +1,3 @@
--- keybinds to center cursor when doing <C-d> or <C-u>
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("LspMappings", { clear = true }),
     callback = function(args)
@@ -14,11 +10,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = bufnr })
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr })
-        vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { buffer = bufnr })
+        vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, { buffer = bufnr })
 
         vim.keymap.set("n", "gl", vim.diagnostic.open_float, { buffer = bufnr })
-        -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr })
-        -- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr })
 
         vim.keymap.set("n", "<leader>ws", require("telescope.builtin").lsp_workspace_symbols, { buffer = bufnr })
         vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols, { buffer = bufnr })

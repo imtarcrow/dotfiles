@@ -1,10 +1,15 @@
 return {
     {
         "stevearc/oil.nvim",
+        cmd = "Oil",
+        init = function()
+            if vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0)) == 1 then
+                require("oil")
+            end
+        end,
         dependencies = {
             { "nvim-mini/mini.icons" },
         },
-        lazy = false,
         opts = {
             default_file_explorer = true,
             columns = {
