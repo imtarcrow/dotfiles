@@ -2,7 +2,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         event = "BufReadPost",
-        commit = "7caec27",
+        commit = "4916d65",
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter").install({
