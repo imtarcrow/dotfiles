@@ -1,6 +1,6 @@
 -- autocommand for formatting code before save
 vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("lsp", { clear = true }),
+    group = vim.api.nvim_create_augroup("LSPSave", { clear = true }),
     callback = function(args)
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = args.buf,
@@ -13,8 +13,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- autocommand for highlighting yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-    group = vim.api.nvim_create_augroup("yank", { clear = true }),
-    callback = function(args)
+    group = vim.api.nvim_create_augroup("Yank", { clear = true }),
+    callback = function()
         vim.hl.on_yank({ higroup = "Visual", timeout = 75 })
     end,
 })
