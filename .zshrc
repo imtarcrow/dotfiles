@@ -16,7 +16,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Set emacs keybinds
-bindkey -v
+bindkey -e
 
 # Pure promt (https://github.com/sindresorhus/pure)
 fpath+=($HOME/.zsh/pure)
