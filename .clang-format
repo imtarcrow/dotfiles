@@ -1,32 +1,76 @@
 BasedOnStyle:     WebKit
 Language:         Cpp
 
-IndentWidth:                  4
-UseTab:                       Never
-TabWidth:                     4
-ColumnLimit:                  140
+#indentation
+IndentWidth:                          4
+UseTab:                               Never
+TabWidth:                             4
+ColumnLimit:                          120
+PenaltyExcessCharacter:               1000
+PenaltyBreakBeforeFirstCallParameter: 1000
 
+Standard:                     latest
+
+#pointers
 PointerAlignment:             Left
 ReferenceAlignment:           Pointer
 DerivePointerAlignment:       false
 
-AllowShortBlocksOnASingleLine: false
-AllowShortIfStatementsOnASingleLine:   Never
-AllowShortLoopsOnASingleLine:          false
-AllowShortCaseLabelsOnASingleLine:     false
-AllowShortFunctionsOnASingleLine:      None
+#includes
+SortIncludes:   CaseSensitive
+IncludeBlocks:  Regroup
 
-SpacesInParentheses:          false
-SpacesInAngles:               false
-SpacesInSquareBrackets:       false
-SpacesInContainerLiterals:    false
-SpaceAfterTemplateKeyword:    true
+IncludeIsMainRegex: '([-_]?(test|unittest|internal))?$'
+
+IncludeCategories:
+  # C standard library
+  - Regex:    '^<(assert|complex|ctype|errno|fenv|float|inttypes|iso646|limits|locale|math|setjmp|signal|stdalign|stdarg|stdatomic|stdbool|stddef|stdint|stdio|stdlib|stdnoreturn|string|tgmath|threads|time|uchar|wchar|wctype)\.h>$'
+    Priority: 1
+
+  # POSIX / Linux / BSD system headers
+  - Regex:    '^<(sys|net|netinet|arpa|linux|asm|bits|gnu|asm-generic)/'
+    Priority: 2
+  - Regex:    '^<(unistd|fcntl|poll|epoll|signal|pthread|ifaddrs|netdb|grp|pwd|termios|ioctl|dlfcn|syslog|dirent|glob|fnmatch|wordexp|regex|iconv|langinfo|xlocale|endian|byteswap)\.h>$'
+    Priority: 2
+
+  # C++ standard library
+  - Regex:    '^<[a-z_]+>$'
+    Priority: 3
+
+  # Third-party libraries
+  - Regex:    '^<'
+    Priority: 4
+
+  # Project-internal
+  - Regex:    '^"'
+    Priority: 5
+
+#short lines
+AllowShortBlocksOnASingleLine:          false
+AllowShortIfStatementsOnASingleLine:    Never
+AllowShortLoopsOnASingleLine:           false
+AllowShortCaseLabelsOnASingleLine:      false
+AllowShortFunctionsOnASingleLine:       None
+
+#spaces
+SpacesInParens:                     Never
+SpacesInParensOptions:
+  InConditionalStatements:          false
+  InCStyleCasts:                    false
+  InEmptyParantheses:               false
+  Other:                            false
+SpacesInAngles:                     false
+SpacesInSquareBrackets:             false
+SpacesInContainerLiterals:          false
+SpaceAfterTemplateKeyword:          false
+SpaceBeforeCtorInitializerColon:    false
+SpaceBeforeInheritanceColon:        false
+SpaceBeforeRangeBasedForLoopColon:  true
 
 BinPackArguments:             true
 BinPackParameters:            true
-PenaltyExcessCharacter:       1000
-PenaltyBreakBeforeFirstCallParameter: 19
 
+#braces
 BreakBeforeBraces:            Custom
 BraceWrapping:
   AfterFunction:              true      
@@ -45,32 +89,14 @@ BraceWrapping:
   SplitEmptyRecord:           true
   SplitEmptyNamespace:        true
 
-BreakConstructorInitializers: BeforeComma
-PackConstructorInitializers:  BinPack
-ConstructorInitializerIndentWidth: 4
+BreakConstructorInitializers:       BeforeColon
+PackConstructorInitializers:        BinPack
+ConstructorInitializerIndentWidth:  4
 
-AccessModifierOffset:         -4
+AccessModifierOffset:         -2
 AlignAfterOpenBracket:        Align
 AlignConsecutiveAssignments:  false
 AlignConsecutiveDeclarations: false
-Standard:                     c++20
 
-SortIncludes:                 true
-IncludeBlocks:                Regroup
-IncludeCategories:
-  - Regex:           '^(<|"(gtest|gmock|benchmark)/)'
-    Priority:        1
-  - Regex:           '^"(third_party|vendor|external)/'
-    Priority:        2
-  - Regex:           '^"(public|include)/'
-    Priority:        3
-  - Regex:           '^".*\.h'
-    Priority:        4
-  - Regex:           '.*'
-    Priority:        5
-
-SpaceBeforeCtorInitializerColon: false
-SpaceBeforeInheritanceColon:     false
-SpaceBeforeRangeBasedForLoopColon: true
-FixNamespaceComments:         true
-AlignEscapedNewlines:         Right
+FixNamespaceComments: true
+AlignEscapedNewlines: Right
