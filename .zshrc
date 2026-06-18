@@ -45,7 +45,8 @@ PURE_CMD_MAX_EXEC_TIME=2
 PURE_GIT_DELAY_DIRTY_CHECK=180
 
 zstyle ":prompt:pure:git:stash" show yes
+zstyle ':prompt:pure:path' color 'green'
+zstyle ':prompt:pure:prompt:success' color 'red'
 
 autoload -U promptinit; promptinit
 prompt pure
-
