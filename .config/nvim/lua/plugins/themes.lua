@@ -63,9 +63,9 @@ return {
                         surface2 = "#4d4d4d",
                         surface1 = "#404040",
                         surface0 = "#292929",
-                        base = "#030303",
-                        mantle = "#050505",
-                        crust = "#020202",
+                        base = "#070707",
+                        mantle = "#0f0f0f",
+                        crust = "#171717",
                     },
                 },
                 transparent_background = false,
@@ -167,7 +167,7 @@ return {
                             Ignore = { fg = colors.subtext2 },
                             Macro = { fg = colors.teal },
 
-                            -- Treesitter captures (direct, no TS* intermediary)
+                            -- Treesitter captures
                             ["@annotation"] = { fg = colors.mauve },
                             ["@attribute"] = { fg = colors.mauve },
                             ["@boolean"] = { fg = colors.mauve },
