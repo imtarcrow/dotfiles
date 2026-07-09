@@ -50,3 +50,4 @@ zstyle ':prompt:pure:prompt:success' color 'red'
 
 autoload -U promptinit; promptinit
 prompt pure
+fastfetch
