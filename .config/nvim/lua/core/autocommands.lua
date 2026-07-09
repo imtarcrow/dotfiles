@@ -18,3 +18,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.hl.on_yank({ higroup = "Visual", timeout = 75 })
     end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function()
+        if vim.bo.filetype == "" then
+            vim.cmd("filetype detect")
+        end
+    end,
+})

@@ -2,8 +2,10 @@ return {
     {
         "saghen/blink.cmp",
         event = "InsertEnter",
-        dependencies = { "rafamadriz/friendly-snippets" },
-        version = "1.*",
+        build = function()
+            require('blink.cmp').build():pwait()
+        end,
+        dependencies = { "saghen/blink.lib", "rafamadriz/friendly-snippets" },
         opts = {
             appearance = {
                 nerd_font_variant = "mono",

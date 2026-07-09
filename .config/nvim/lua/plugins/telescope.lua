@@ -1,6 +1,7 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
+        tag = "v0.2.2",
         lazy = true,
         dependencies = {
             { "nvim-mini/mini.icons" },
@@ -16,7 +17,6 @@ return {
                 file_ignore_patterns = {
                     "%.git/",
                 },
-                borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             },
             extensions = {
                 fzf = {
@@ -33,11 +33,11 @@ return {
             },
         },
         keys = {
-            { "<leader>ff", "<cmd>Telescope find_files<cr>",                desc = "Find Files" },
-            { "<leader>fg", "<cmd>Telescope live_grep<cr>",                 desc = "Live Grep" },
-            { "<leader>fb", "<cmd>Telescope buffers<cr>",                   desc = "Buffers" },
-            { "<leader>fs", "<cmd>Telescope treesitter<cr>",                desc = "Treesitter Symbols" },
-            { "<leader>cd", "<cmd>Telescope find_files cwd=~/dotfiles<cr>", desc = "Change dotfiles" },
+            { "<leader>ff", "<cmd>Telescope find_files<cr>",                 desc = "Find Files" },
+            { "<leader>fg", "<cmd>Telescope live_grep<cr>",                  desc = "Live Grep" },
+            { "<leader>fb", "<cmd>Telescope buffers<cr>",                    desc = "Buffers" },
+            { "<leader>fs", "<cmd>Telescope treesitter<cr>",                 desc = "Treesitter Symbols" },
+            { "<leader>cd", "<cmd>Telescope find_files cwd=~/.dotfiles<cr>", desc = "Change dotfiles" },
         },
         config = function(_, opts)
             require("telescope").setup(opts)
