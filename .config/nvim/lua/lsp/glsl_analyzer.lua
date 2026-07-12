@@ -1,14 +1,14 @@
 vim.lsp.config("glsl_analyzer", {
     cmd = { "glsl_analyzer" },
-    filetypes = {
-        "glsl",
-        "vert",
-        "frag",
-        "geom",
-        "tesc",
-        "tese",
-        "comp",
-    },
+    -- filetypes = {
+    --     "glsl",
+    --     "vert",
+    --     "frag",
+    --     "geom",
+    --     "tesc",
+    --     "tese",
+    --     "comp",
+    -- },
     root_markers = { ".git" },
     settings = {
         glsl_analyzer = {
@@ -18,4 +18,5 @@ vim.lsp.config("glsl_analyzer", {
         },
     },
 })
+
 vim.lsp.enable("glsl_analyzer")

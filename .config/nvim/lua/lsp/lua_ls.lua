@@ -4,4 +4,5 @@ vim.lsp.config("lua_ls", {
     root_markers = { ".luarc.json", ".git" },
     settings = { Lua = { diagnostics = { globals = { "vim" } } } },
 })
+
 vim.lsp.enable("lua_ls")

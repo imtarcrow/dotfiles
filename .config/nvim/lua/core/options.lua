@@ -20,16 +20,15 @@ vim.opt.incsearch = true
 
 -- UI
 vim.opt.showmode = false
--- vim.opt.winborder = "single"
 vim.opt.signcolumn = "yes"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.wrap = false
 vim.opt.cursorline = true
+vim.opt.wrap = false
 
 -- Scrolloff
-vim.opt.scrolloff = 4
-vim.opt.sidescrolloff = 8
+vim.opt.scrolloff = 6
+vim.opt.sidescrolloff = 6
 
 -- Files
 vim.opt.swapfile = false
