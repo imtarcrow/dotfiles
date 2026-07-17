@@ -1,0 +1,57 @@
+[user]
+	name = imtarcrow
+	email = github@tarcrow.com
+	signingkey = ~/.ssh/personal_ed25519
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+
+[color]
+	ui = auto
+
+[pull]
+	rebase = true
+
+[rebase]
+	autosetuprebase = always
+	autoStash = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+
+[fetch]
+	prune = true
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+    gpgsign = true
+
+[rerere]
+	enabled = true
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+
+[commit]
+    gpgsign = true
