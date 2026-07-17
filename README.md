@@ -3,7 +3,7 @@
 
 Inside this repository there are multiple configuration files for different programs such as:
 
-* zsh
+* fish
 * nvim
 * kitty
 * git
