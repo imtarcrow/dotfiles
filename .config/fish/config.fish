@@ -8,7 +8,7 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 set -g hydro_color_pwd green
-set -g hydro_color_git black
+set -g hydro_color_git brblack
 set -g hydro_color_start brred
 set -g hydro_color_error red
 set -g hydro_color_prompt brred
