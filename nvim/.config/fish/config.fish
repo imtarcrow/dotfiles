@@ -20,5 +20,4 @@ set -g fish_prompt_pwd_dir_length 10000
 fish_default_key_bindings
 
 # rust
-fish_add_path $HOME/.cargo/bin
-test -f "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish"
+source "$HOME/.cargo/env.fish"
