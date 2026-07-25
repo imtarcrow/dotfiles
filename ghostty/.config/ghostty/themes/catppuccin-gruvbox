@@ -1,0 +1,27 @@
+# ~/.config/ghostty/themes/catppuccin-gruvbox
+
+background = #0d0e0e
+foreground = #e8dcc2
+
+selection-background = #e8dcc2
+selection-foreground = #0d0e0e
+
+cursor-color = #e8dcc2
+cursor-text  = #0d0e0e
+
+palette = 0=#252525
+palette = 1=#e46876
+palette = 2=#98bb6c
+palette = 3=#e6c384
+palette = 4=#7fb4ca
+palette = 5=#c4a7e7
+palette = 6=#7aa89f
+palette = 7=#dcd7ba
+palette = 8=#6c6c6c
+palette = 9=#ff7f8c
+palette = 10=#b5d98c
+palette = 11=#ffd58f
+palette = 12=#9ed0e3
+palette = 13=#d8b8ff
+palette = 14=#9fd0c4
+palette = 15=#fff5d6

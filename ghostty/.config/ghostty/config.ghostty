@@ -1,0 +1,34 @@
+language = de
+font-family = "Iosevka Term SS15"
+font-size = 14
+
+# theme = 
+
+cursor-style = block
+
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+
+window-vsync = true
+confirm-close-surface = false
+
+scrollback-limit = 10000000
+
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+
+right-click-action = ignore
+
+keybind = ctrl+shift+1=goto_tab:1
+keybind = ctrl+shift+2=goto_tab:2
+keybind = ctrl+shift+3=goto_tab:3
+keybind = ctrl+shift+4=goto_tab:4
+keybind = ctrl+shift+5=goto_tab:5
+keybind = ctrl+shift+6=goto_tab:6
+keybind = ctrl+shift+7=goto_tab:7
+keybind = ctrl+shift+8=goto_tab:8
+keybind = ctrl+shift+9=goto_tab:9
+
+config-file = themes/catppuccin-gruvbox
