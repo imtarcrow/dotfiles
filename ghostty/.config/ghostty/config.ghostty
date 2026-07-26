@@ -2,7 +2,8 @@ language = de
 font-family = "Iosevka Term SS15"
 font-size = 14
 
-# theme = 
+background-opacity = 0.95
+background-blur = 20
 
 cursor-style = block
 
