@@ -71,7 +71,7 @@ return {
                         -- crust = "#171717",
                     },
                 },
-                transparent_background = false,
+                transparent_background = true,
                 show_end_of_buffer = false,
                 integration_default = false,
                 integrations = {
