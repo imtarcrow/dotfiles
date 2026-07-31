@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR _hydro_git_1301:main\u2022\x20
+SETUVAR _hydro_git_2358:main\u2022\x20
+SETUVAR _hydro_git_45461:main\u2022\x20
 SETUVAR _hydro_git_45818:main\u2022\x20
-SETUVAR _hydro_git_61569:main\u2022\x20
-SETUVAR fish_user_paths:/home/bo/\x2ecargo/bin
+SETUVAR fish_user_paths:/Users/bo/\x2ecargo/bin\x1e/home/bo/\x2ecargo/bin
