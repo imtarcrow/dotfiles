@@ -1,1 +1,20 @@
 fish/.config/fish/fish_variables
+
+# macOS
+.AppleDouble
+.LSOverride
+.Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Linux
+*~
+.nfs*
+
+# temp files
+*.swp
+*.swo
+*.tmp
+*.bak
