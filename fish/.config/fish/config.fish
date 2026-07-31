@@ -6,7 +6,10 @@ set -g fish_history_max 10000
 
 set -gx EDITOR nvim
 set -gx VISUAL nvim
-set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+if test (uname) != Darwin
+    set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+end
 
 set -g hydro_color_pwd green
 set -g hydro_color_git brblack
