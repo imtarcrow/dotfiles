@@ -32,4 +32,6 @@ keybind = ctrl+shift+7=goto_tab:7
 keybind = ctrl+shift+8=goto_tab:8
 keybind = ctrl+shift+9=goto_tab:9
 
+custom-shader = shaders/cursor_warp.glsl
+
 config-file = themes/catppuccin-gruvbox
