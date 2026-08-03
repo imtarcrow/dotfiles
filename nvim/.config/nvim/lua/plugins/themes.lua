@@ -7,38 +7,9 @@ return {
         config = function()
             require("catppuccin").setup({
                 background = {
-                    light = "latte",
                     dark = "mocha",
                 },
                 color_overrides = {
-                    latte = {
-                        rosewater = "#c14a4a",
-                        flamingo = "#c14a4a",
-                        red = "#c14a4a",
-                        maroon = "#c14a4a",
-                        pink = "#945e80",
-                        mauve = "#945e80",
-                        peach = "#c35e0a",
-                        yellow = "#b47109",
-                        green = "#6c782e",
-                        teal = "#4c7a5d",
-                        sky = "#4c7a5d",
-                        sapphire = "#4c7a5d",
-                        blue = "#45707a",
-                        lavender = "#45707a",
-                        text = "#654735",
-                        subtext1 = "#73503c",
-                        subtext0 = "#805942",
-                        overlay2 = "#8c6249",
-                        overlay1 = "#8c856d",
-                        overlay0 = "#a69d81",
-                        surface2 = "#bfb695",
-                        surface1 = "#d1c7a3",
-                        surface0 = "#e3dec3",
-                        base = "#f9f5d7",
-                        mantle = "#f0ebce",
-                        crust = "#e8e3c8",
-                    },
                     mocha = {
                         rosewater = "#ea6962",
                         flamingo = "#ea6962",
@@ -66,58 +37,33 @@ return {
                         base = "#0d0e0e",
                         mantle = "#0a0b0b",
                         crust = "#060707",
-                        -- base = "#070707",
-                        -- mantle = "#0f0f0f",
-                        -- crust = "#171717",
                     },
                 },
-                transparent_background = true,
-                show_end_of_buffer = false,
+                transparent_background = false,
+                show_end_of_buffer = true,
                 integration_default = false,
                 integrations = {
-                    barbecue = { dim_dirname = true, bold_basename = true, dim_context = false, alt_background = false },
-                    cmp = true,
                     gitsigns = true,
-                    hop = true,
-                    illuminate = { enabled = true },
                     native_lsp = { enabled = true, inlay_hints = { background = true } },
-                    neogit = true,
-                    neotree = true,
                     semantic_tokens = true,
                     treesitter = true,
                     treesitter_context = true,
-                    vimwiki = true,
-                    which_key = true,
+                    blink_cmp = {
+                        style = "bordered"
+                    },
+                    fidget = true,
+                    mini = { enabled = true },
+                    blink_indent = true,
                 },
                 highlight_overrides = {
                     all = function(colors)
                         return {
                             -- UI
-                            CmpItemMenu = { fg = colors.surface2 },
                             CursorLineNr = { fg = colors.text },
                             FloatBorder = { bg = colors.base, fg = colors.surface0 },
                             GitSignsChange = { fg = colors.peach },
                             LineNr = { fg = colors.overlay0 },
                             LspInfoBorder = { link = "FloatBorder" },
-                            NeoTreeDirectoryIcon = { fg = colors.subtext1 },
-                            NeoTreeDirectoryName = { fg = colors.subtext1 },
-                            NeoTreeFloatBorder = { link = "TelescopeResultsBorder" },
-                            NeoTreeGitConflict = { fg = colors.red },
-                            NeoTreeGitDeleted = { fg = colors.red },
-                            NeoTreeGitIgnored = { fg = colors.overlay0 },
-                            NeoTreeGitModified = { fg = colors.peach },
-                            NeoTreeGitStaged = { fg = colors.green },
-                            NeoTreeGitUnstaged = { fg = colors.red },
-                            NeoTreeGitUntracked = { fg = colors.green },
-                            NeoTreeIndent = { fg = colors.surface1 },
-                            NeoTreeNormal = { bg = colors.mantle },
-                            NeoTreeNormalNC = { bg = colors.mantle },
-                            NeoTreeRootName = { fg = colors.subtext1, style = { "bold" } },
-                            NeoTreeTabActive = { fg = colors.text, bg = colors.mantle },
-                            NeoTreeTabInactive = { fg = colors.surface2, bg = colors.crust },
-                            NeoTreeTabSeparatorActive = { fg = colors.mantle, bg = colors.mantle },
-                            NeoTreeTabSeparatorInactive = { fg = colors.crust, bg = colors.crust },
-                            NeoTreeWinSeparator = { fg = colors.base, bg = colors.base },
                             NormalFloat = { bg = colors.base },
                             Pmenu = { bg = colors.mantle, fg = "" },
                             PmenuSel = { bg = colors.surface0, fg = "" },
@@ -134,12 +80,9 @@ return {
                             TelescopeResultsTitle = { fg = colors.mantle, bg = colors.mantle },
                             TelescopeSelection = { bg = colors.surface0 },
                             VertSplit = { bg = colors.base, fg = colors.surface0 },
-                            WhichKeyFloat = { bg = colors.mantle },
                             YankHighlight = { bg = colors.surface2 },
                             FidgetTask = { fg = colors.subtext2 },
                             FidgetTitle = { fg = colors.peach },
-                            IblIndent = { fg = colors.surface0 },
-                            IblScope = { fg = colors.overlay0 },
 
                             -- Traditional syntax
                             Boolean = { fg = colors.mauve },
@@ -274,64 +217,8 @@ return {
                             ["@lsp.type.variable"] = { fg = colors.text },
                         }
                     end,
-                    latte = function(colors)
-                        return {
-                            IblIndent = { fg = colors.mantle },
-                            IblScope = { fg = colors.surface1 },
-                            LineNr = { fg = colors.surface1 },
-                        }
-                    end,
                 },
             })
         end,
-    },
-    {
-        "vague-theme/vague.nvim",
-        lazy = true,
-        priority = 1000,
-        opts = {
-            transparent = false,
-            bold = true,
-            italic = true,
-        },
-    },
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        lazy = true,
-        priority = 1000,
-        opts = {
-            variant = "moon",
-            extend_background_behind_borders = true,
-        },
-    },
-    {
-        "rebelot/kanagawa.nvim",
-        lazy = true,
-        priority = 1000,
-        opts = {
-            compile = true,
-            theme = "dragon",
-            background = {
-                dark = "dragon",
-            },
-            overrides = function(colors)
-                local theme = colors.theme
-                return {
-                    EndOfBuffer = {
-                        fg = theme.ui.nontext,
-                    },
-                }
-            end,
-            colors = {
-                theme = {
-                    all = {
-                        ui = {
-                            bg_gutter = "none",
-                        },
-                    },
-                },
-            },
-        },
-    },
+    }
 }
