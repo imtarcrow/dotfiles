@@ -1,22 +1,7 @@
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 vim.lsp.config("glsl_analyzer", {
-    cmd = { "glsl_analyzer" },
-    -- filetypes = {
-    --     "glsl",
-    --     "vert",
-    --     "frag",
-    --     "geom",
-    --     "tesc",
-    --     "tese",
-    --     "comp",
-    -- },
-    root_markers = { ".git" },
-    settings = {
-        glsl_analyzer = {
-            diagnostics = {
-                enable = true,
-            },
-        },
-    },
+    capabilities = capabilities,
 })
 
 vim.lsp.enable("glsl_analyzer")

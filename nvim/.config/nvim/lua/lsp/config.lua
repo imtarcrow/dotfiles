@@ -1,6 +1,9 @@
 vim.diagnostic.config({
     virtual_text = true,
     severity_sort = true,
+    underline = true,
+    signs = true,
+    update_in_insert = true,
 })
 
 -- Settings for the Language Servers
@@ -9,7 +12,7 @@ require("lsp.clangd")
 require("lsp.lua_ls")
 require("lsp.glsl_analyzer")
 
---idk how the fuck this works but gemini generated it for me and it works
+-- idk how the fuck this works but gemini generated it for me and it works
 vim.api.nvim_create_autocmd({ "LspAttach", "LspProgress" }, {
     group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
     callback = function(args)

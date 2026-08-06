@@ -1,9 +1,5 @@
 require("core.autocommands")
 
-vim.g.mapleader = " "
-vim.g.localmapleader = "\\"
-
-
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true

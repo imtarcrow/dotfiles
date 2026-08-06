@@ -1,8 +1,23 @@
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 vim.lsp.config("lua_ls", {
-    cmd = { "lua-language-server" },
-    filetypes = { "lua" },
-    root_markers = { ".luarc.json", ".git" },
-    settings = { Lua = { diagnostics = { globals = { "vim" } } } },
+    capabilities = capabilities,
+
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim" }
+            },
+
+            workspace = {
+                checkThirdParty = false,
+            },
+
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
 })
 
 vim.lsp.enable("lua_ls")

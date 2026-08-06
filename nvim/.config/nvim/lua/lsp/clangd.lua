@@ -1,7 +1,19 @@
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 vim.lsp.config("clangd", {
-    cmd = { "clangd" },
-    filetypes = { "c", "cpp" },
-    root_markers = { "compile_commands.json", ".git" },
+    capabilities = capabilities,
+
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--pch-storage=memory",
+        "--all-scopes-completion",
+        "--cross-file-rename",
+        "--function-arg-placeholders",
+    },
 })
 
 vim.lsp.enable("clangd")
