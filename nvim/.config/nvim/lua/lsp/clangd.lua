@@ -11,8 +11,6 @@ vim.lsp.config("clangd", {
         "--header-insertion=iwyu",
         "--pch-storage=memory",
         "--all-scopes-completion",
-        "--cross-file-rename",
-        "--function-arg-placeholders",
     },
 })
 
