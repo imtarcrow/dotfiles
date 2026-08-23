@@ -2,11 +2,14 @@ language = de
 
 # font-family = "CaskaydiaCove Nerd Font Mono"
 # font-size = 14
-#
+
 # font-family = "JetBrainsMono Nerd Font Mono"
 # font-size = 14
 
-font-family = "Iosevka Custom"
+# font-family = "Iosevka Custom"
+# font-size = 16
+
+font-family = "Monaspace Neon NF"
 font-size = 16
 
 cursor-style = block_hollow
@@ -41,6 +44,8 @@ keybind = ctrl+shift+6=goto_tab:6
 keybind = ctrl+shift+7=goto_tab:7
 keybind = ctrl+shift+8=goto_tab:8
 keybind = ctrl+shift+9=goto_tab:9
+
+keybind = cmd+w=ignore
 
 custom-shader = ./shaders/cursor_warp.glsl
 
