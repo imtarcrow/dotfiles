@@ -1,16 +1,7 @@
 language = de
 
-# font-family = "CaskaydiaCove Nerd Font Mono"
-# font-size = 14
-
-# font-family = "JetBrainsMono Nerd Font Mono"
-# font-size = 14
-
-# font-family = "Iosevka Custom"
-# font-size = 16
-
 font-family = "Monaspace Neon NF"
-font-size = 12
+font-size = 14
 
 window-padding-x = 6
 window-padding-y = 6
@@ -30,8 +21,8 @@ clipboard-trim-trailing-spaces = true
 
 right-click-action = ignore
 
-shell-integration = fish
-shell-integration-features = ssh-env,ssh-terminfo
+# shell-integration = fish
+shell-integration-features = no-cursor,ssh-env,ssh-terminfo
 
 keybind = ctrl+shift+1=goto_tab:1
 keybind = ctrl+shift+2=goto_tab:2
@@ -45,6 +36,7 @@ keybind = ctrl+shift+9=goto_tab:9
 
 keybind = cmd+w=ignore
 
-custom-shader = ./shaders/cursor_warp.glsl
+custom-shader = ./shaders/cursor_sweep.glsl
+custom-shader-animation = always
 
 config-file = themes/catppuccin-gruvbox
