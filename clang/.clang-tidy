@@ -1,55 +1,78 @@
 Checks: >
   clang-analyzer-*,
-  clang-analyzer-security*,
-  bugprone-*,
-  -bugprone-easily-swappable-parameters,
-  performance-*,
-  portability-*,
-  readability-*,
+  bugprone-dangling-handle,
+  bugprone-dangling-reference,
+  bugprone-infinite-loop,
+  bugprone-sizeof-expression,
+  bugprone-suspicious-missing-comma,
+  bugprone-misplaced-widening-cast,
+  bugprone-use-after-move,
+  bugprone-not-null-terminated-result,
+
+  performance-avoid-endl,
+  performance-expensive-value-or,
+  performance-for-range-copy,
+  performance-implicit-conversion-in-loop,
+  performance-inefficient-algorithm,
+  performance-inefficient-vector-operation,
+  performance-move-const-arg,
+  performance-move-constructor-init,
+  performance-no-automatic-move,
+  performance-no-int-to-ptr,
+  performance-noexcept-move-constructor,
+  performance-noexcept-swap,
+  performance-string-view-conversions,
+  performance-unnecessary-copy-initialization,
+  performance-unnecessary-value-param,
+  performance-use-std-move,
+
   modernize-use-nullptr,
   modernize-use-override,
   modernize-use-equals-default,
   modernize-use-equals-delete,
-  modernize-pass-by-value,
+  modernize-loop-convert,
+  modernize-avoid-bind,
+  modernize-make-unique,
+  modernize-make-shared,
   modernize-redundant-void-arg,
-  misc-*,
+  modernize-pass-by-value,
+
+  readability-function-cognitive-complexity,
+  readability-magic-numbers,
+  readability-container-size-empty,
+  readability-redundant-string-cstr,
+  readability-redundant-smartptr-get,
+
   cppcoreguidelines-pro-type-member-init,
   cppcoreguidelines-slicing,
   cppcoreguidelines-special-member-functions,
-  cppcoreguidelines-owning-memory,
-  cppcoreguidelines-avoid-goto,
-  cppcoreguidelines-init-variables
+  cppcoreguidelines-init-variables,
+  cppcoreguidelines-narrowing-conversions,
+  cppcoreguidelines-pro-type-const-cast,
+  cppcoreguidelines-pro-type-static-cast-downcast,
+
+  cert-dcl37-c,
+  cert-dcl51-cpp,
+  cert-err33-c,
+  cert-err34-c,
+  cert-exp42-c,
+  cert-exp45-c,
+  cert-oop54-cpp,
+  cert-oop57-cpp,
+  cert-oop58-cpp,
+
+  misc-const-correctness,
 
 WarningsAsErrors: ''
-
-HeaderFilterRegex: '^(src|source|include)/'
 
 FormatStyle: file
 
 CheckOptions:
-  - key: bugprone-easily-swappable-parameters.MinimumLength
-    value: 3
+  readability-function-cognitive-complexity.Threshold: 20
 
-  - key: performance-move-const-arg.CheckMoveForConstArg
-    value: 'true'
+  readability-magic-numbers.IgnoredIntegerValues: '0;1;-1;2;3;4;5;6;7;8;9;10'
+  readability-magic-numbers.IgnoredFloatingPointValues: '0.0;1.0;-1.0'
 
-  - key: performance-move-const-arg.CheckTriviallyCopyableMove
-    value: 'true'
-
-  - key: misc-const-correctness.TransformValues
-    value: 'true'
-
-  - key: misc-const-correctness.TransformReferences
-    value: 'true'
-
-  - key: misc-const-correctness.TransformPointersAsValues
-    value: 'false'
-
-  - key: readability-function-cognitive-complexity.Threshold
-    value: '20'
-
-  - key: readability-magic-numbers.IgnoredIntegerValues
-    value: '0;1;-1;2;3;4;5;6;7;8;9;10'
-
-  - key: readability-magic-numbers.IgnoredFloatingPointValues
-    value: '0.0;1.0;-1.0'
+  misc-const-correctness.TransformValues: 'true'
+  misc-const-correctness.TransformReferences: 'true'
+  misc-const-correctness.TransformPointersAsValues: 'false'

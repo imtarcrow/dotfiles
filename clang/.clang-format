@@ -15,7 +15,7 @@ PenaltyBreakBeforeFirstCallParameter: 1000
 PointerAlignment: Left
 ReferenceAlignment: Pointer
 DerivePointerAlignment: false
-QualifierAlignment: Left
+QualifierAlignment: Leave
 
 SortIncludes: CaseSensitive
 IncludeBlocks: Regroup

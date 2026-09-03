@@ -1,3 +1,4 @@
+
 Diagnostics:
   UnusedIncludes: Strict
   MissingIncludes: Strict
@@ -18,3 +19,10 @@ InlayHints:
   DeducedTypes: true
   Designators: true
   BlockEnd: true
+
+---
+If:
+  PathMatch: .*/(third_party|vendor|generated|external|build)/.*
+
+Diagnostics:
+  Suppress: '*'
