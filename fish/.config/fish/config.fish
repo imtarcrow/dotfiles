@@ -19,6 +19,7 @@ set -g hydro_color_prompt brred
 set -g hydro_color_duration bryellow
 set -g hydro_fetch true
 set -g fish_prompt_pwd_dir_length 10000
+set -g hydro_symbol_prompt λ
 
 fish_default_key_bindings
 
