@@ -1,6 +1,7 @@
 vim.diagnostic.config({
     virtual_text = {
         current_line = true,
+        prefix = "●"
     },
     severity_sort = true,
     signs = true,
