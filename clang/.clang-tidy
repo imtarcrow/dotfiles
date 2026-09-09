@@ -38,7 +38,6 @@ Checks: >
   modernize-pass-by-value,
 
   readability-function-cognitive-complexity,
-  readability-magic-numbers,
   readability-container-size-empty,
   readability-redundant-string-cstr,
   readability-redundant-smartptr-get,
@@ -69,9 +68,6 @@ FormatStyle: file
 
 CheckOptions:
   readability-function-cognitive-complexity.Threshold: 20
-
-  readability-magic-numbers.IgnoredIntegerValues: '0;1;-1;2;3;4;5;6;7;8;9;10'
-  readability-magic-numbers.IgnoredFloatingPointValues: '0.0;1.0;-1.0'
 
   misc-const-correctness.TransformValues: 'true'
   misc-const-correctness.TransformReferences: 'true'
